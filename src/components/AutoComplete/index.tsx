@@ -36,14 +36,14 @@ function AutoComplete(): JSX.Element {
   };
 
   const debounceSearchInput = useCallback((value: string) => {
-    updateValue(value, setToSearch);
+    updateValue(value.toLowerCase(), setToSearch);
   }, []);
 
   useEffect(() => {
     if (toSearch.length > 0 && makeRequest) {
       fetch(
         `https://jsonplaceholder.typicode.com/posts?title_like=^${encodeURIComponent(
-          toSearch.toLowerCase(),
+          toSearch,
         )}&limit=10`,
         {
           method: "GET",
