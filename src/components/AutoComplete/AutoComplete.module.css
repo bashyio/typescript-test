@@ -1,0 +1,79 @@
+.autoCompleteHolder {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.inputHolder {
+  overflow: hidden;
+}
+
+.autoCompleteInput {
+  display: block;
+  background: #222a3f;
+  border: solid 2px #3b424c;
+  color: #a6b2c6;
+  font-size: 15px;
+  transition: color 0.5s ease 0s, background 0.5s ease 0s, border 0.5s ease 0s;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  float: left;
+  border-radius: 5px;
+  padding: 10px 40px 10px 10px;
+  transition: 0.5s;
+}
+.autoCompleteInput:focus,
+.autoCompleteInput:hover {
+  border-color: #1bcff9;
+}
+
+.clearInput {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #a6b2c6;
+  transition: 0.5s;
+  outline: none;
+  font-weight: bold;
+  font-size: 15px;
+  opacity: 0.7;
+}
+.clearInput:hover,
+.clearInput:focus {
+  color: #d91e18;
+  opacity: 1;
+}
+.clearInput[disabled] {
+  color: #3b424c;
+}
+
+.entryGroup {
+  display: block;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 2px;
+  padding-bottom: 50px;
+}
+
+.entry {
+  background: #222a3f;
+  color: #d3d9e3;
+  display: block;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.98;
+  margin-top: 1px;
+  transition: 0.5s;
+}
+.entry:hover,
+.entry:focus {
+  background: #3c4661;
+}

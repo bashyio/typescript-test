@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AutoComplete from "./components/AutoComplete";
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="section">
+        <div className="container">
+          <AutoComplete />
+          <p>
+            Demo Paragraph placed here <br />
+            to prove that the Search Results <br />
+            will appear on top of any <br />
+            component/content below the form.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
