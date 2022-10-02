@@ -107,7 +107,7 @@ function AutoComplete(): JSX.Element {
             <Entry
               key={post.id}
               value={post.title}
-              searched={searched}
+              input={input}
               selectInput={selectInput}
             />
           ))}

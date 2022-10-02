@@ -1,7 +1,13 @@
 import styles from "./AutoComplete.module.css";
 import { EntryProps } from "./AutoComplete.types";
 
-function Entry({ value, searched, selectInput }: EntryProps): JSX.Element {
+function Entry({ value, input, selectInput }: EntryProps): JSX.Element {
+  let match = "";
+  for (let i = 0; i < input.length; i++) {
+    if (value[i].toLowerCase() !== input[i].toLowerCase()) break;
+    match = `${match}${value[i]}`;
+  }
+
   return (
     <li
       className={styles.entry}
@@ -10,8 +16,8 @@ function Entry({ value, searched, selectInput }: EntryProps): JSX.Element {
       }}
       role="button"
     >
-      <b>{value.substring(0, searched.length)}</b>
-      {value.substring(searched.length)}
+      <b>{value.substring(0, match.length)}</b>
+      {value.substring(match.length)}
     </li>
   );
 }

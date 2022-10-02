@@ -11,6 +11,6 @@ export interface Post {
 
 export interface EntryProps {
   value: string;
-  searched: string;
+  input: string;
   selectInput: SelectInput;
 }
