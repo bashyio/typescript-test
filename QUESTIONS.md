@@ -10,9 +10,9 @@ Sometimes, shouldComponent can block values passed down from context to child co
 
 ##### 3. Describe 3 ways to pass information from a component to its PARENT.
 
-- Create a callback function (that sets state for example) in the Parent Component.
-- Pass the function as prop to the Child Component
-- Call the function from the child component with information that can then be used in the Parent Component.
+- Create a callback function (that sets state for example) in the Parent Component. Pass the function as prop to the Child Component. Call the function from the child component with information that can then be used in the Parent Component.
+- Using the Context API. Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+- Using State Management Libraries like Redux (they use Context internally)
 
 ##### 4. Give 2 ways to prevent components from re-rendering.
 
